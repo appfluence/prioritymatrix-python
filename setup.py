@@ -9,4 +9,3 @@ setup(name='prioritymatrix',
       license='MIT',
       packages=['prioritymatrix'],
       zip_safe=False)
-
