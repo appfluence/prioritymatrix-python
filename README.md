@@ -1,5 +1,3 @@
-.. _ref-tutorial:
-
 ====================================
 Getting Started with Priority Matrix
 ====================================
