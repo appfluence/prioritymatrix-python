@@ -8,12 +8,12 @@ Requirements
 Install dependencies:
 The API request processor library [Slumber](http://slumber.readthedocs.org/en/v0.6.0/) ::
 
-  $ pip install slumber
+  `$ pip install slumber`
 
 
 The encoder and decoder Json library [Demjson](https://pypi.python.org/pypi/demjson) ::
 
-  $ pip install demjson
+ `$ pip install demjson`
 
 
 
@@ -23,11 +23,11 @@ Installation
 There are two ways to install the extension.
 Using pip::
 
-  $ pip install priority_matrix
+  `$ pip install priority_matrix`
 
 or download the package, and from the source tree::
 
-  $ [sudo] python setup.py install
+  `$ [sudo] python setup.py install`
 
 Authentication and quick use
 ===============
