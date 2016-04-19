@@ -23,10 +23,15 @@ The encoder and decoder Json library - `Demjson`_ ::
 
 Installation
 ============
-Download the package, and from the source tree::
+
+There are two ways to install the extension.
+Using pip::
+
+  $ pip install priority_matrix
+
+or download the package, and from the source tree::
 
   $ [sudo] python setup.py install
-
 
 Authentication and quick use
 ===============
