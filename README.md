@@ -6,12 +6,12 @@ Getting Started with Priority Matrix
 Requirements
 ============
 Install dependencies:
-The API request processor library [Slumber](http://slumber.readthedocs.org/en/v0.6.0/) ::
+The API request processor library [Slumber](http://slumber.readthedocs.org/en/v0.6.0/) :
 
   `$ pip install slumber`
 
 
-The encoder and decoder Json library [Demjson](https://pypi.python.org/pypi/demjson) ::
+The encoder and decoder Json library [Demjson](https://pypi.python.org/pypi/demjson) :
 
  `$ pip install demjson`
 
@@ -21,11 +21,11 @@ Installation
 ============
 
 There are two ways to install the extension.
-Using pip::
+Using pip:
 
   `$ pip install priority_matrix`
 
-or download the package, and from the source tree::
+or download the package, and from the source tree:
 
   `$ [sudo] python setup.py install`
 
