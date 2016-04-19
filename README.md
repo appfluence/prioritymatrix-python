@@ -38,9 +38,9 @@ Authentication and quick use
 
    Please, follow the instructions of this tutorial to get the access token.
 
-2. Printing an item.
+2. Printing and modifying an item.
 
-   test::
+   test:
 
 ```
      import priority_matrix
