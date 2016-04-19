@@ -6,17 +6,15 @@ Getting Started with Priority Matrix
 Requirements
 ============
 Install dependencies:
-The API request processor library - `Slumber`_ ::
+The API request processor library [Slumber](http://slumber.readthedocs.org/en/v0.6.0/) ::
 
   $ pip install slumber
 
-..  _Slumber: http://slumber.readthedocs.org/en/v0.6.0/
 
-The encoder and decoder Json library - `Demjson`_ ::
+The encoder and decoder Json library [Demjson](https://pypi.python.org/pypi/demjson) ::
 
   $ pip install demjson
 
-.. _Demjson: https://pypi.python.org/pypi/demjson
 
 
 Installation
