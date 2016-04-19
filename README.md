@@ -42,6 +42,7 @@ Authentication and quick use
 
    test::
 
+```
      import priority_matrix
 
      pm = PM("https://sync.appfluence.com/api/v1/", "your_access_token")
@@ -50,3 +51,4 @@ Authentication and quick use
      pm.project("project_name").item("item_name").name = "New item name"
      print pm.project("project_name").item("item_name").name
      print pm.project("project_name").item("item_name").id
+```
