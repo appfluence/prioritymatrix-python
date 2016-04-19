@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started with Priority Matrix &mdash; Python PM API 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python PM API 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="Getting Access Token Authentication - OAuth 2.0" href="get_access_token.html" />
+    <link rel="prev" title="Welcome to Priority Matrix Python API’s documentation!" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="get_access_token.html" title="Getting Access Token Authentication - OAuth 2.0"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Priority Matrix Python API’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python PM API 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-with-priority-matrix">
+<span id="ref-tutorial"></span><h1>Getting Started with Priority Matrix<a class="headerlink" href="#getting-started-with-priority-matrix" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Install dependencies:
+The API request processor library - <a class="reference external" href="http://slumber.readthedocs.org/en/v0.6.0/">Slumber</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install slumber
+</pre></div>
+</div>
+<p>The encoder and decoder Json library - <a class="reference external" href="https://pypi.python.org/pypi/demjson">Demjson</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install demjson
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Download the package, and from the source tree:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ [sudo] python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="authentication-and-quick-use">
+<h2>Authentication and quick use<a class="headerlink" href="#authentication-and-quick-use" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Priority Matrix API uses a the authentication  OAuth 2.0.</p>
+<p>You need an access token to use the library.</p>
+<p>Please, follow the instructions of this tutorial to get the access token.</p>
+</li>
+<li><p class="first">Printing an item.</p>
+<p>test.py:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">priority_matrix</span>
+
+<span class="n">pm</span> <span class="o">=</span> <span class="n">PM</span><span class="p">(</span><span class="s2">&quot;https://sync.appfluence.com/api/v1/&quot;</span><span class="p">,</span> <span class="s2">&quot;your_access_token&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="n">pm</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="s2">&quot;project_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="s2">&quot;item_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="s2">&quot;project_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="s2">&quot;item_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;New item name&quot;</span>
+<span class="nb">print</span> <span class="n">pm</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="s2">&quot;project_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="s2">&quot;item_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
+<span class="nb">print</span> <span class="n">pm</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="s2">&quot;project_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="s2">&quot;item_name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">id</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started with Priority Matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#authentication-and-quick-use">Authentication and quick use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="get_access_token.html">Getting Access Token Authentication - OAuth 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_documentation.html">Priority Matrix - Code Documentation</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Priority Matrix Python API&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="get_access_token.html"
+                        title="next chapter">Getting Access Token Authentication - OAuth 2.0</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="get_access_token.html" title="Getting Access Token Authentication - OAuth 2.0"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Priority Matrix Python API’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python PM API 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Samuel Carmona.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Priority Matrix - Main Class &mdash; Python PM API 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python PM API 1.0.0 documentation" href="index.html" />
+    <link rel="up" title="Priority Matrix - Code Documentation" href="code_documentation.html" />
+    <link rel="next" title="Project Class" href="project.html" />
+    <link rel="prev" title="Priority Matrix - Code Documentation" href="code_documentation.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="project.html" title="Project Class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="code_documentation.html" title="Priority Matrix - Code Documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python PM API 1.0.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="code_documentation.html" accesskey="U">Priority Matrix - Code Documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pm">
+<span id="priority-matrix-main-class"></span><h1>Priority Matrix - Main Class<a class="headerlink" href="#module-pm" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pm.PM">
+<em class="property">class </em><code class="descclassname">pm.</code><code class="descname">PM</code><span class="sig-paren">(</span><em>api_url</em>, <em>access_token</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the main Priority Matrix Class.</p>
+<dl class="method">
+<dt id="pm.PM.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>api_url</em>, <em>access_token</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor of the Priority Matrix python API</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>api_url</strong> (<a class="reference external" href="https://docs.python.org/library/string.html#module-string" title="(in Python v2.7)"><em>string</em></a>) &#8211; The URL of the API</li>
+<li><strong>access_token</strong> (<a class="reference external" href="https://docs.python.org/library/string.html#module-string" title="(in Python v2.7)"><em>string</em></a>) &#8211; Our Acess token to connect with the API</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pm.PM.api">
+<code class="descname">api</code><em class="property"> = None</em><a class="headerlink" href="#pm.PM.api" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.createItem">
+<code class="descname">createItem</code><span class="sig-paren">(</span><em>json_code</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.createItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getCollaborators">
+<code class="descname">getCollaborators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getCollaborators" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getCollaboratorsNames">
+<code class="descname">getCollaboratorsNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getCollaboratorsNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getComments">
+<code class="descname">getComments</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getComments" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getItems">
+<code class="descname">getItems</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dicionary with all the items we have</p>
+<p>:return:A item dictionary {key=item_name, object=Item}
+:rtype: dict</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">At the creation of the PM object, it gets all the projects, and each project contains his items. So, if we want to get an item from a determined project, we dont need to call this function.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getMe">
+<code class="descname">getMe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getMe" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getProjects">
+<code class="descname">getProjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getProjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains all the projects and their items.
+Returns the a project dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a project dictionary {key=project_name, object=Project}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/stdtypes.html#dict" title="(in Python v2.7)">dict</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function is called in the constructor of this class.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getUser">
+<code class="descname">getUser</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.getUsers">
+<code class="descname">getUsers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.getUsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.item">
+<code class="descname">item</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the item with the specified ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; The item ID</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Item object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="item.html#item.Item" title="item.Item">Item</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.newItem">
+<code class="descname">newItem</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.newItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>TBD</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pm.PM.project">
+<code class="descname">project</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#pm.PM.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the project with the specified name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_name</strong> (<a class="reference external" href="https://docs.python.org/library/string.html#module-string" title="(in Python v2.7)"><em>string</em></a>) &#8211; The name of the project</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The specified project</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="project.html#project.Project" title="project.Project">Project</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The project with the specified name must exists</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting Started with Priority Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_access_token.html">Getting Access Token Authentication - OAuth 2.0</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="code_documentation.html">Priority Matrix - Code Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Priority Matrix - Main Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html">Project Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="item.html">Item Class</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="code_documentation.html"
+                        title="previous chapter">Priority Matrix - Code Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="project.html"
+                        title="next chapter">Project Class</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pm.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="project.html" title="Project Class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="code_documentation.html" title="Priority Matrix - Code Documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python PM API 1.0.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="code_documentation.html" >Priority Matrix - Code Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Samuel Carmona.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
+    </div>
+  </body>
+</html>

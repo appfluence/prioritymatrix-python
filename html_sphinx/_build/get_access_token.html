@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Access Token Authentication - OAuth 2.0 &mdash; Python PM API 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python PM API 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="Priority Matrix - Code Documentation" href="code_documentation.html" />
+    <link rel="prev" title="Getting Started with Priority Matrix" href="tutorial.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="code_documentation.html" title="Priority Matrix - Code Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="Getting Started with Priority Matrix"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python PM API 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-access-token-authentication-oauth-2-0">
+<h1>Getting Access Token Authentication - OAuth 2.0<a class="headerlink" href="#getting-access-token-authentication-oauth-2-0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-id-and-client-secret">
+<h2>Getting ID and Client Secret<a class="headerlink" href="#getting-id-and-client-secret" title="Permalink to this headline">¶</a></h2>
+<p>We use <a class="reference external" href="http://oauth.net/2/">OAuth 2.0</a>  for authentication.</p>
+<p>First, create an application on /o/applications/</p>
+<div class="line-block">
+<div class="line">1. Go to <a class="reference external" href="https://sync.appfluence.com/o/applications/">https://sync.appfluence.com/o/applications/</a></div>
+</div>
+<div class="line-block">
+<div class="line">2. Create a new application:</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>name: any unique name</li>
+<li>client type: confidential</li>
+<li>authorization grant type: “Resource owner password-based”</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">3.  Save the client id and client secret.</div>
+</div>
+<blockquote>
+<div>Example:</div></blockquote>
+<a class="reference internal image-reference" href="../images/pm_id_client_secret.jpg"><img alt="ID and Client Secret" src="../images/pm_id_client_secret.jpg" style="width: 55%;" /></a>
+</div>
+<div class="section" id="getting-access-token">
+<h2>Getting Access Token<a class="headerlink" href="#getting-access-token" title="Permalink to this headline">¶</a></h2>
+<p>To get the authorization token, we have to do a &#8220;http post&#8221; request on /o/token/ .
+A fast way is to use the Chrome Postman plugin or Firefox/RESTClient plugin.</p>
+<p>Firstly, we have to login, on  <a class="reference external" href="https://sync.appfluence.com">https://sync.appfluence.com</a> ,  on the browser we are going to use the plugin.
+Once we are logged in, the plugin will catch directly the cookie to connect with the Appfluence API.</p>
+<p>Then, we are going to use Chrome/Postman on our example.</p>
+<div class="line-block">
+<div class="line">1. On Basic Auth tab, we fill our ID and client secret, in the textboxes Username and Password respectively, and click on &#8220;Refres headers&#8221; to generate automatically the Authorization header:</div>
+</div>
+<blockquote>
+<div><img alt="ID and Client Secret" src="../images/pm_id_client_secret_2.jpg" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">2. We set the request to a POST one, and in the x-www-form-uncoded tab we are going write the our username, password and grant_type.
+Then, we send the request, and the response will be the access_token.
+Example:</div>
+</div>
+<blockquote>
+<div><img alt="ID and Client Secret" src="../images/pm_id_client_secret_3.jpg" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">3. In the request response we can see our <strong>access_token string</strong>, this is the parameter we need to connect to the API in our Priority Matrix python API.</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting Started with Priority Matrix</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Access Token Authentication - OAuth 2.0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-id-and-client-secret">Getting ID and Client Secret</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-access-token">Getting Access Token</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code_documentation.html">Priority Matrix - Code Documentation</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="previous chapter">Getting Started with Priority Matrix</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="code_documentation.html"
+                        title="next chapter">Priority Matrix - Code Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/get_access_token.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="code_documentation.html" title="Priority Matrix - Code Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="Getting Started with Priority Matrix"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python PM API 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Samuel Carmona.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
+    </div>
+  </body>
+</html>
