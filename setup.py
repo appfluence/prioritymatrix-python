@@ -1,12 +1,12 @@
 from setuptools import setup
 
 setup(name='prioritymatrix',
-      version='0.1',
+      version='0.2',
       description='Priority Matrix API',
-      author='Samuel Carmona',
-      url = 'https://github.com/samuc/prioritymatrix-python',
-      download_url = 'https://github.com/samuc/prioritymatrix-python/tarball/0.1',
-      author_email='samuel@appfluence.com',
+      author='Appfluence Inc',
+      url='https://github.com/appfluence/prioritymatrix-python',
+      download_url = 'https://github.com/appfluence/prioritymatrix-python/tarball/0.2',
+      author_email='support+github@appfluence.com',
       license='MIT',
       packages=['prioritymatrix'],
       zip_safe=False)

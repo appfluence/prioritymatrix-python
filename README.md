@@ -1,20 +1,21 @@
-====================================
-Getting Started with Priority Matrix
-====================================
+# What is this?
 
+This project is library to facilitate interaction with the Priority Matrix API. 
+Priority Matrix is a multiplatform software suite that implements the [prioritization matrix](https://appfluence.com/productivity/prioritization-matrix/) method for project and project management.
+
+Getting Started with the library
+====================================
 
 Requirements
 ============
-Install dependencies:
-The API request processor library [Slumber](http://slumber.readthedocs.org/en/v0.6.0/) :
+Start by installing the API request processor library [Slumber](https://slumber.readthedocs.org/en/v0.6.0/):
 
   `$ pip install slumber`
 
 
-The encoder and decoder Json library [Demjson](https://pypi.python.org/pypi/demjson) :
+Then, the encoder and decoder Json library [Demjson](https://pypi.python.org/pypi/demjson) :
 
  `$ pip install demjson`
-
 
 
 Installation
