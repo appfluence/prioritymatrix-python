@@ -1,23 +1,18 @@
-import getpass
-import os
-import re
 import slumber
 import pprint
 import json
 import requests
-import time
 from item import Item
 from project import Project
 from user import User
-from datetime import datetime, timedelta
 
+_printerJson = pprint.PrettyPrinter(indent=4)
 
 class PM(object):
     """
     This is the main Priority Matrix Class.
     """
 
-    _printerJson = pprint.PrettyPrinter(indent=4)
     _projects = {}
     api = None
 
@@ -127,7 +122,7 @@ class PM(object):
         for i in json_projects:
             projects_dict[i["name"]] = Project(i, self.api)
 
-        for p in projects_dict.itervalues():
+        for p in projects_dict.values():
             array_items = []
             total_project_items = (self.api.project(p.getIdd()).items.get(limit=1, format=json))["meta"]["total_count"]
 
